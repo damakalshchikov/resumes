@@ -1,0 +1,25 @@
+% Шрифт выбирается автоматически под ОС
+\usepackage{ifplatform}
+
+\iflinux
+    \newcommand{\mainfont}{Liberation Serif}
+    \newcommand{\monofont}{Liberation Mono}
+\else
+    \newcommand{\mainfont}{Times New Roman}
+    \newcommand{\monofont}{Courier New}
+\fi
+
+% ФИО, выводимое в шапке резюме
+\newcommand{\cvName}{Михаил Дамакальщиков}
+
+% Ссылка на GitHub и подпись ссылки
+\newcommand{\cvGithubURL}{https://github.com/damakalshchikov}
+\newcommand{\cvGithubLabel}{GitHub}
+
+% Ссылка на Telegram и подпись ссылки
+\newcommand{\cvTelegramURL}{https://t.me/damakalshchikov}
+\newcommand{\cvTelegramLabel}{Telegram}
+
+% Email и подпись ссылки
+\newcommand{\cvEmailAddress}{damakalshchikov.work@gmail.com}
+\newcommand{\cvEmailLabel}{Email}

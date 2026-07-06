@@ -1,0 +1,112 @@
+\PassOptionsToPackage{pdfpagelabels=false}{hyperref}
+
+% Шрифт всего документа - 11pt
+% Тип документа - статья
+\documentclass[11pt]{article}
+
+% Параметры документа (персональные данные, ссылки)
+% Загружаем первым, чтобы флаги/команды из config.tex были доступны в преамбуле
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\input{config}
+\input{macros}
+
+% Управление шрифтами
+\usepackage{fontspec}
+% Основной шрифт документа (задаётся в config.tex)
+\setmainfont{\mainfont}
+
+% Моноширинный шрифт (для листингов кода, задаётся в config.tex)
+\setmonofont{\monofont}
+
+% Поддержка многоязычных документов (русский + английский)
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+% Настройка полей документа (резюме — на одну страницу)
+\usepackage[a4paper, margin=2cm]{geometry}
+
+% Без отступа в начале абзаца
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+% Кликабельные ссылки в PDF
+\usepackage[colorlinks=true, urlcolor=cvred, linkcolor=cvred]{hyperref}
+
+% Начало документа
+\begin{document}
+
+    \pagenumbering{gobble}
+
+    % Шапка
+    \begin{center}
+        {\LARGE\bfseries \cvName}\\[6pt]
+        \href{\cvGithubURL}{\cvGithubLabel} \textbar\
+        \href{\cvTelegramURL}{\cvTelegramLabel} \textbar\
+        \href{mailto:\cvEmailAddress}{\cvEmailLabel}
+    \end{center}
+
+    % Образование
+    \cvsection{Образование}
+
+    \cventry{МГТУ <<СТАНКИН>>}{2023 г. -- 2027 г.}
+    \cvsubtext{Бакалавриат, институт информационных технологий}
+
+    Направление: Прикладная информатика \textit{(09.03.03)}.\\
+    Релевантные курсы: Алгоритмы и структуры данных, базы данных, программирование, математическое моделирование.
+
+    % Технические навыки
+    \cvsection{Технические навыки}
+    Python, Golang, C, Make, Docker, SQL, gRPC, REST, Django, Swagger, CI/CD.
+
+    % Проекты
+    \cvsection{Опыт групповой работы}
+
+    \begin{enumerate}
+        \setlength{\itemsep}{5pt}
+        \setlength{\parsep}{0pt}
+        \setlength{\topsep}{0pt}
+
+        \item \cvproject{Сервис отправки электронных писем}{.NET}
+        Задача: Разработать сервис для отправки электронных писем пользователям.\\
+        Технологии: MailKit, ASP.NET Core, gRPC.\\
+        Результат: При входе пользователь получает письмо на почту с информацией о входе в новой сессии.
+
+        \item \cvproject{Передача аудио и видео}{Golang}
+        Задача: Разработать сервис для передачи медиа-данных в реальном времени.\\
+        Технологии: WebRTC, WebSocket.\\
+        Результат: Веб-сервис для передачи медиа-данных в реальном времени. Архитектура по принципу SFU.
+
+    \end{enumerate}
+    \vspace{-8pt}
+
+    \cvsection{Достижения}
+
+    \begin{enumerate}
+        \setlength{\itemsep}{5pt}
+        \setlength{\parsep}{0pt}
+        \setlength{\topsep}{0pt}
+
+        \item \cvproject{Московский студенческий DATA-Хакатон (Участие)}{Python}
+        Задача: Создать инструмент для проверки результатов независимых тестирований,
+        проводимых образовательными организациями, используя данные о проведении тестирования
+        детей на знание истории.\\
+        Результат: Интерактивный дашборд, ML--модель.
+
+        \item \cvproject{1-ое место в лиге <<HC Track \#3 -- <<SBOM Graph Explorer>>>>}{Python}
+        Задача: Разработать интерактивный инструмент для анализа ошибок во время исполнения кода
+        в ввиде графа.\\
+        Результат: Графовая структура, где каждая ошибка/предупреждение --- это вершина, а стек ошибок
+        представлен в виде связей.
+
+        \item \cvproject{Обучение в Школе 21}{ветка DevOps}
+    \end{enumerate}
+    \vspace{-8pt}
+
+    \cvsection{Приложение}
+
+    \href{https://drive.google.com/drive/folders/1PbiaM1iDKKHpeF0jfbwqTMyxY1bCCpZh?usp=sharing}{Ссылка на Google Drive с сертификатами и дипломами}.
+
+% Конец документа
+\end{document}

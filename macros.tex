@@ -1,0 +1,29 @@
+% Цвет заголовков разделов (тёмно-красный)
+\definecolor{cvred}{RGB}{163,29,42}
+
+% Цвет второстепенного текста (например, тип обучения курсивом)
+\definecolor{cvgray}{RGB}{90,90,90}
+
+% Заголовок раздела резюме: жирный красный текст + линия под ним
+\newcommand{\cvsection}[1]{%
+    \vspace{10pt}%
+    {\color{cvred}\bfseries\large #1}\par
+    \vspace{2pt}
+    {\color{cvred}\hrule height 1pt}%
+    \vspace{6pt}%
+}
+
+% Строка "заголовок слева — период/тип справа" (используется для образования)
+\newcommand{\cventry}[2]{%
+    \noindent\textbf{#1}\hfill\textit{#2}\\%
+}
+
+% Строка проекта: название, необязательная пометка (например, "личный проект"), технологии справа
+\newcommand{\cvproject}[3][]{%
+    \noindent\textbf{#2}%
+    \ifblank{#1}{}{\ \ {\small\itshape #1}}%
+    \hfill\textit{#3}\\%
+}
+
+% Второстепенная строка курсивом серого цвета (например, тип обучения)
+\newcommand{\cvsubtext}[1]{{\color{cvgray}\itshape #1}}
