@@ -106,9 +106,5 @@ _minted*
 !.vscode/.settings-for-linux.json
 !.vscode/.settings-for-macos.json
 
-# IDEs
-.idea/
-.vscode/
-
 # Other
 .DS_Store
