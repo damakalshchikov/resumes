@@ -27,14 +27,3 @@
 
 % Второстепенная строка курсивом серого цвета (например, тип обучения)
 \newcommand{\cvsubtext}[1]{{\color{cvgray}\itshape #1}}
-
-% Нумерованный список проектов/достижений с компактными отступами
-\newenvironment{cvlist}{%
-    \begin{enumerate}
-        \setlength{\itemsep}{5pt}
-        \setlength{\parsep}{0pt}
-        \setlength{\topsep}{0pt}
-}{%
-    \end{enumerate}
-    \vspace{-8pt}
-}
