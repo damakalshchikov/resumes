@@ -1,6 +1,11 @@
-% ФИО, Telegram, GitHub и почта
+% ФИО, должность, Telegram, GitHub и почта
 \begin{center}
-    {\LARGE\bfseries \cvName}\\[6pt]
+    {\LARGE\bfseries \cvName}\\[4pt]
+    \ifdefined\cvRole
+        {\large\cvsubtext{\cvRole}}\\[6pt]
+    \else
+        \vspace{2pt}
+    \fi
     \href{\cvGithubURL}{\cvGithubLabel} \textbar\
     \href{\cvTelegramURL}{\cvTelegramLabel} \textbar\
     \href{mailto:\cvEmailAddress}{\cvEmailLabel}
