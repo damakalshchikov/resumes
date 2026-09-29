@@ -2,9 +2,13 @@
 \input{preamble}
 
 \begin{document}
+
     \input{sections/header}
-    \input{sections/education}
-    \input{sections/skills-backend}
+    \cvsection{Образование}
+        \input{sections/education}
+
+    \cvsection{Технические навыки}
+        \input{sections/skills-backend}
 
     \cvsection{Релевантный опыт}
     \begin{cvlist}
@@ -19,5 +23,7 @@
         \input{items/school21}
     \end{cvlist}
 
-    \input{sections/appendix}
+    \cvsection{Приложение}
+        \input{sections/appendix}
+
 \end{document}
