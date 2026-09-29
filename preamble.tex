@@ -1,7 +1,6 @@
 \PassOptionsToPackage{pdfpagelabels=false}{hyperref}
 
 % Параметры документа (персональные данные, ссылки)
-% Загружаем первым, чтобы флаги/команды из config.tex были доступны в преамбуле
 \usepackage{xcolor}
 \usepackage{etoolbox}
 \input{config}
@@ -11,18 +10,16 @@
 \usepackage{fontspec}
 % Основной шрифт документа (задаётся в config.tex)
 \setmainfont{\mainfont}
-
 % Моноширинный шрифт (для листингов кода, задаётся в config.tex)
 \setmonofont{\monofont}
 
-% Поддержка многоязычных документов (русский + английский)
+% Поддержка многоязычных документов (русский и английский)
 \usepackage{polyglossia}
 \setdefaultlanguage{russian}
 \setotherlanguage{english}
 
-% Настройка полей документа (резюме — на одну страницу)
+% Настройка полей документа (резюме на одну страницу)
 \usepackage[a4paper, margin=2cm]{geometry}
-
 % Без отступа в начале абзаца
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2pt}
