@@ -1,4 +1,4 @@
-\PassOptionsToPackage{pdfpagelabels=false}{hyperref}
+% \PassOptionsToPackage{pdfpagelabels=false}{hyperref}
 
 % Шрифт всего документа - 11pt
 % Тип документа - статья
@@ -6,33 +6,33 @@
 
 % Параметры документа (персональные данные, ссылки)
 % Загружаем первым, чтобы флаги/команды из config.tex были доступны в преамбуле
-\usepackage{xcolor}
-\usepackage{etoolbox}
-\input{config}
-\input{macros}
+% \usepackage{xcolor}
+% \usepackage{etoolbox}
+% \input{config}
+% \input{macros}
 
 % Управление шрифтами
-\usepackage{fontspec}
+% \usepackage{fontspec}
 % Основной шрифт документа (задаётся в config.tex)
-\setmainfont{\mainfont}
+% \setmainfont{\mainfont}
 
 % Моноширинный шрифт (для листингов кода, задаётся в config.tex)
-\setmonofont{\monofont}
+% \setmonofont{\monofont}
 
 % Поддержка многоязычных документов (русский + английский)
-\usepackage{polyglossia}
-\setdefaultlanguage{russian}
-\setotherlanguage{english}
+% \usepackage{polyglossia}
+% \setdefaultlanguage{russian}
+% \setotherlanguage{english}
 
 % Настройка полей документа (резюме — на одну страницу)
-\usepackage[a4paper, margin=2cm]{geometry}
+% \usepackage[a4paper, margin=2cm]{geometry}
 
 % Без отступа в начале абзаца
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{2pt}
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{2pt}
 
 % Кликабельные ссылки в PDF
-\usepackage[colorlinks=true, urlcolor=cvred, linkcolor=cvred]{hyperref}
+% \usepackage[colorlinks=true, urlcolor=cvred, linkcolor=cvred]{hyperref}
 
 % Начало документа
 \begin{document}
@@ -61,7 +61,7 @@
     Python, Golang, C, Make, Docker, SQL, gRPC, REST, Django, React, Swagger, CI/CD.
 
     % Проекты
-    \cvsection{Опыт групповой работы}
+    \cvsection{Релевантный опыт}
 
     \begin{enumerate}
         \setlength{\itemsep}{5pt}
@@ -70,12 +70,12 @@
 
         \item \cvproject{Сервис отправки электронных писем}{.NET}
         Задача: Разработать сервис для отправки электронных писем пользователям.\\
-        Технологии: MailKit, ASP.NET Core, gRPC.\\
+        Стек: MailKit, ASP.NET Core, gRPC.\\
         Результат: При входе пользователь получает письмо на почту с информацией о входе в новой сессии.
 
         \item \cvproject{Передача аудио и видео}{Golang}
         Задача: Разработать сервис для передачи медиа-данных в реальном времени.\\
-        Технологии: WebRTC, WebSocket.\\
+        Стек: WebRTC, WebSocket.\\
         Результат: Веб-сервис для передачи медиа-данных в реальном времени. Архитектура по принципу SFU.
 
     \end{enumerate}
