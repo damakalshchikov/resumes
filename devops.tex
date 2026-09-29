@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\input{preamble}
+
+\begin{document}
+
+    \input{sections/header}
+    \cvsection{Образование}
+        \input{sections/education}
+
+    \cvsection{Технические навыки}
+        \input{sections/skills-devops}
+
+    \cvsection{Релевантный опыт}
+    \begin{cvlist}
+        \input{items/linux-configuration}
+        \input{items/linux-network}
+        \input{items/gh-actions-tex}
+    \end{cvlist}
+
+    \cvsection{Достижения}
+    \begin{cvlist}
+        \input{items/school21}
+        \input{items/sbom}
+    \end{cvlist}
+
+    \cvsection{Приложение}
+        \input{sections/appendix}
+
+\end{document}
